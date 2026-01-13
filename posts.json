@@ -33,7 +33,7 @@
       "tags": ["typography"],
       "cover": "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1600&q=60",
       "bodyHtml": "<h2>Line height</h2><p>…</p><h2>Weights</h2><p>…</p>"
-    }
+    },
     {
   "id": 5,
   "slug": "galaxy-s25-ultra-2026-whats-new",
@@ -52,5 +52,6 @@
   ],
   "popular": [5, 2, 1]
 }
+
 
 
