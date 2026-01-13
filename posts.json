@@ -1,7 +1,7 @@
 {
   "site": {
     "name": "Blog Studio",
-    "url": "https://lundy009.github.io/lundystudio",
+    "url": "http://hellobongdy.fun/",
     "description": "Modern Blog UI • Khmer + English • Responsive",
     "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=60"
   },
@@ -52,6 +52,7 @@
   ],
   "popular": [2, 1]
 }
+
 
 
 
