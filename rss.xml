@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Blog Studio</title>
+    <link>https://example.com/</link>
+    <description>Modern Blog UI</description>
+    <language>km</language>
+    <item>
+      <title><![CDATA[How to build a modern blog layout (UI + Responsive)]]></title>
+      <link>https://example.com/post.html?id=1</link>
+      <guid>https://example.com/post.html?id=1</guid>
+      <pubDate>Mon, 12 Jan 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[UI ស្អាត សម្រាប់ blog card grid + sidebar + pagination…]]></description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="km">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Blog Studio • Home</title>
+  <meta name="description" content="Modern Blog UI • Pro++" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+Khmer:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./styles.css" />
+
+  <!-- PWA -->
+  <link rel="manifest" href="./manifest.webmanifest">
+  <meta name="theme-color" content="#0b1220">
+</head>
+
+<body data-theme="dark">
+  <div class="topbar">
+    <div class="wrap">
+      <div class="nav">
+        <a class="brand" href="./index.html">
+          <span class="logo" aria-hidden="true"></span>
+          <span>Blog Studio</span>
+        </a>
+
+        <nav class="menu" aria-label="Primary">
+          <a href="./index.html" data-nav="home">Home</a>
+          <a href="#categories" data-nav="categories">Categories</a>
+          <a href="./category.html?cat=tech" data-nav="cat-tech">Tech</a>
+          <a href="./category.html?cat=design" data-nav="cat-design">Design</a>
+        </nav>
+
+        <div class="right">
+          <button class="btn hamburger" id="btnMenu" aria-label="Open menu">Menu</button>
+          <button class="btn" id="btnTheme" aria-label="Toggle theme">Theme</button>
+          <a class="btn primary" href="#subscribe">Subscribe</a>
+        </div>
+      </div>
+
+      <div class="mobile-drawer" id="drawer">
+        <nav class="menu mobile" aria-label="Mobile">
+          <a href="./index.html" data-nav="home">Home</a>
+          <a href="#categories" data-nav="categories">Categories</a>
+          <a href="./category.html?cat=tech" data-nav="cat-tech">Tech</a>
+          <a href="./category.html?cat=design" data-nav="cat-design">Design</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <header class="hero" id="top">
+    <div class="wrap">
+      <div class="hero-grid">
+        <section class="hero-card">
+          <div class="pill">
+            <span>✨ Blog Studio</span>
+            <span style="color:var(--muted)">• Pro++</span>
+          </div>
+          <h1>Modern Blog UI • Pagination • SEO • TOC • PWA</h1>
+          <p>Search + Category filter + Pagination ដោយ URL params — ស្រាលៗ ងាយ deploy លើ GitHub Pages/Netlify/Vercel។</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#latest">View Latest Posts</a>
+            <a class="btn" href="./category.html?cat=tech">Tech</a>
+            <a class="btn" href="./category.html?cat=design">Design</a>
+          </div>
+        </section>
+
+        <aside class="mini-card">
+          <h3>Pro++ Features</h3>
+          <p>TOC active highlight + Progress bar + Offline PWA + Feed files</p>
+          <div class="stats">
+            <div class="stat"><b>SEO</b><span>OG/Twitter</span></div>
+            <div class="stat"><b>PWA</b><span>Offline</span></div>
+            <div class="stat"><b>TOC</b><span>ScrollSpy</span></div>
+            <div class="stat"><b>Pager</b><span>?page=2</span></div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="wrap">
+      <div class="toolbar" id="latest">
+        <div class="search" role="search">
+          <span class="icon" aria-hidden="true">🔎</span>
+          <input id="q" type="search" placeholder="Search posts… (e.g. design, tech, tips)" />
+        </div>
+
+        <div class="chips" id="categories">
+          <button class="chip" data-filter="all">All</button>
+          <button class="chip" data-filter="tech">Tech</button>
+          <button class="chip" data-filter="design">Design</button>
+          <button class="chip" data-filter="business">Business</button>
+          <button class="chip" data-filter="tutorial">Tutorial</button>
+        </div>
+      </div>
+
+      <div class="content">
+        <section>
+          <!-- Skeleton while loading -->
+          <div class="grid" id="posts">
+            <div class="skeleton"><div class="sh big"></div><div class="sh w60"></div><div class="sh w85"></div><div class="sh w40"></div></div>
+            <div class="skeleton"><div class="sh big"></div><div class="sh w60"></div><div class="sh w85"></div><div class="sh w40"></div></div>
+            <div class="skeleton"><div class="sh big"></div><div class="sh w60"></div><div class="sh w85"></div><div class="sh w40"></div></div>
+            <div class="skeleton"><div class="sh big"></div><div class="sh w60"></div><div class="sh w85"></div><div class="sh w40"></div></div>
+          </div>
+
+          <div class="pager" aria-label="Pagination">
+            <span id="pagerInfo" style="color:var(--muted);font-weight:900">Loading…</span>
+            <div id="pager"></div>
+          </div>
+        </section>
+
+        <aside class="side">
+          <div class="panel">
+            <h3>Popular Posts</h3>
+            <div class="list" id="popular"></div>
+          </div>
+
+          <div class="panel" id="subscribe">
+            <h3>Newsletter</h3>
+            <p style="margin:0;color:var(--muted);font-size:14px">demo UI</p>
+            <div class="newsletter">
+              <input type="email" placeholder="Your email…" />
+              <button class="btn primary" type="button">Join</button>
+            </div>
+            <div class="small">No spam. Unsubscribe anytime.</div>
+          </div>
+
+          <div class="panel">
+            <h3>Feeds</h3>
+            <p style="margin:0;color:var(--muted);font-size:14px">
+              RSS: <a href="./rss.xml">rss.xml</a><br/>
+              Sitemap: <a href="./sitemap.xml">sitemap.xml</a>
+            </p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot">
+        <span>© <span id="year"></span> Blog Studio</span>
+        <div style="display:flex;gap:14px;flex-wrap:wrap">
+          <a href="./index.html">Home</a>
+          <a href="./category.html?cat=tech">Tech</a>
+          <a href="./category.html?cat=design">Design</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module">
+    import { initCommon, initIndex } from "./app.js";
+    initCommon();
+    initIndex();
+  </script>
+
+  <!-- PWA SW -->
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("./sw.js");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+{
+  "site": {
+    "name": "Blog Studio",
+    "url": "https://example.com",
+    "description": "Modern Blog UI • Khmer + English • Responsive",
+    "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=60"
+  },
+  "posts": [
+    {
+      "id": 1,
+      "slug": "modern-blog-layout",
+      "cat": "tech",
+      "badge": "Tech",
+      "date": "2026-01-12",
+      "read": "5 min read",
+      "topic": "UI/UX",
+      "title": "How to build a modern blog layout (UI + Responsive)",
+      "excerpt": "UI ស្អាត សម្រាប់ blog card grid + sidebar + pagination…",
+      "tags": ["layout", "ui"],
+      "cover": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=60",
+      "bodyHtml": "<h2>Intro</h2><p>…</p><h2>Layout</h2><p>…</p><h3>Tip</h3><p>…</p><div class='callout'>Pro++: TOC + Progress + PWA ✅</div><h2>Performance</h2><p>…</p>"
+    },
+    {
+      "id": 2,
+      "slug": "typography-khmer-latin",
+      "cat": "design",
+      "badge": "Design",
+      "date": "2026-01-09",
+      "read": "4 min read",
+      "topic": "Fonts",
+      "title": "Typography tips for Khmer + Latin",
+      "excerpt": "របៀបបញ្ចូល font ខ្មែរ+អង់គ្លេស ឲ្យស្អាត និងអានងាយ…",
+      "tags": ["typography"],
+      "cover": "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1600&q=60",
+      "bodyHtml": "<h2>Line height</h2><p>…</p><h2>Weights</h2><p>…</p>"
+    }
+  ],
+  "popular": [2, 1]
+}
+

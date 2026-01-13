@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="km">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Blog Studio • Category</title>
+  <meta name="description" content="Category page" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+Khmer:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./styles.css" />
+
+  <!-- PWA -->
+  <link rel="manifest" href="./manifest.webmanifest">
+  <meta name="theme-color" content="#0b1220">
+</head>
+
+<body data-theme="dark">
+  <div class="topbar">
+    <div class="wrap">
+      <div class="nav">
+        <a class="brand" href="./index.html">
+          <span class="logo" aria-hidden="true"></span>
+          <span>Blog Studio</span>
+        </a>
+
+        <nav class="menu" aria-label="Primary">
+          <a href="./index.html" data-nav="home">Home</a>
+          <a href="./category.html?cat=tech" data-nav="cat-tech">Tech</a>
+          <a href="./category.html?cat=design" data-nav="cat-design">Design</a>
+          <a href="./category.html?cat=business" data-nav="cat-business">Business</a>
+          <a href="./category.html?cat=tutorial" data-nav="cat-tutorial">Tutorial</a>
+          <a href="#top" data-nav="categories">Categories</a>
+        </nav>
+
+        <div class="right">
+          <button class="btn" id="btnTheme">Theme</button>
+          <a class="btn primary" href="./index.html">← Back</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main class="main" id="top">
+    <div class="wrap">
+      <div class="header-card">
+        <h1 style="margin:0;font-size:22px">Category: <span id="catName"></span></h1>
+        <p style="margin:6px 0 0;color:var(--muted)">Supports: ?cat=tech&page=2&q=ui</p>
+      </div>
+
+      <div class="toolbar">
+        <div class="search" role="search">
+          <span class="icon" aria-hidden="true">🔎</span>
+          <input id="q" type="search" placeholder="Search in this category…" />
+        </div>
+      </div>
+
+      <div class="content">
+        <section>
+          <div class="grid" id="posts">
+            <div class="skeleton"><div class="sh big"></div><div class="sh w60"></div><div class="sh w85"></div><div class="sh w40"></div></div>
+            <div class="skeleton"><div class="sh big"></div><div class="sh w60"></div><div class="sh w85"></div><div class="sh w40"></div></div>
+            <div class="skeleton"><div class="sh big"></div><div class="sh w60"></div><div class="sh w85"></div><div class="sh w40"></div></div>
+            <div class="skeleton"><div class="sh big"></div><div class="sh w60"></div><div class="sh w85"></div><div class="sh w40"></div></div>
+          </div>
+
+          <div class="pager" aria-label="Pagination">
+            <span id="pagerInfo" style="color:var(--muted);font-weight:900">Loading…</span>
+            <div id="pager"></div>
+          </div>
+        </section>
+
+        <aside class="side">
+          <div class="panel">
+            <h3>Quick</h3>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <a class="btn" href="./category.html?cat=tech">Tech</a>
+              <a class="btn" href="./category.html?cat=design">Design</a>
+              <a class="btn" href="./category.html?cat=business">Business</a>
+              <a class="btn" href="./category.html?cat=tutorial">Tutorial</a>
+              <a class="btn" href="./category.html?cat=all">All</a>
+            </div>
+          </div>
+
+          <div class="panel">
+            <h3>Feeds</h3>
+            <p style="margin:0;color:var(--muted);font-size:14px">
+              <a href="./rss.xml">RSS</a> • <a href="./sitemap.xml">Sitemap</a>
+            </p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot">
+        <span>© <span id="year"></span> Blog Studio</span>
+        <span style="color:var(--muted)">category.html</span>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module">
+    import { initCommon, initCategory } from "./app.js";
+    initCommon();
+    initCategory();
+  </script>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("./sw.js");
+    }
+  </script>
+</body>
+</html>

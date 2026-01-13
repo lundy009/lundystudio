@@ -1,0 +1,8 @@
+{
+  "name": "blog-studio-propp",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:feeds": "node build-feeds.mjs"
+  }
+}

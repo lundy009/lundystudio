@@ -1,0 +1,8 @@
+[build]
+  publish = "."
+  command = "npm run build:feeds || echo 'skip feeds'"
+
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "no-cache"
