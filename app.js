@@ -310,7 +310,44 @@ export async function initCommon(){
     btnMenu.addEventListener("click", () => drawer.classList.toggle("show"));
     $all(".menu.mobile a").forEach(a => a.addEventListener("click", () => drawer.classList.remove("show")));
   }
+// Donate Modal
+const btnDonate = document.getElementById("btnDonate");
+const modal = document.getElementById("donateModal");
 
+function openModal(){
+  if(!modal) return;
+  modal.classList.add("show");
+  modal.setAttribute("aria-hidden","false");
+  document.body.style.overflow = "hidden";
+}
+function closeModal(){
+  if(!modal) return;
+  modal.classList.remove("show");
+  modal.setAttribute("aria-hidden","true");
+  document.body.style.overflow = "";
+}
+
+btnDonate?.addEventListener("click", openModal);
+
+modal?.addEventListener("click", (e) => {
+  const t = e.target;
+  if(t?.dataset?.close === "true") closeModal();
+});
+
+document.addEventListener("keydown", (e) => {
+  if(e.key === "Escape") closeModal();
+});
+
+// Copy ABA ID
+document.getElementById("btnCopyPay")?.addEventListener("click", async () => {
+  const abaId = "xxxxxx"; // <-- change to your ABA ID
+  try{
+    await navigator.clipboard.writeText(abaId);
+    toast?.("Copied ✅"); // uses your existing toast in app.js
+  }catch(err){
+    alert("Copy failed");
+  }
+});
   ensureToast();
   setActiveMenu();
 }
@@ -565,3 +602,4 @@ export async function initPost(){
     btnFb.rel = "noopener";
   }
 }
+
