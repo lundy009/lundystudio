@@ -171,6 +171,56 @@
       navigator.serviceWorker.register("./sw.js");
     }
   </script>
+  <!-- Donate Modal -->
+<div class="modal" id="donateModal" role="dialog" aria-modal="true" aria-labelledby="donateTitle" aria-hidden="true">
+  <div class="modal-backdrop" data-close="true"></div>
+
+  <div class="modal-card" role="document">
+    <div class="modal-head">
+      <div>
+        <div class="modal-title" id="donateTitle">Support / Donate</div>
+        <div class="modal-sub">ស្កែន QR ដើម្បីគាំទ្រ (ABA / KHQR)</div>
+      </div>
+      <button class="modal-close" type="button" aria-label="Close" data-close="true">✕</button>
+    </div>
+
+    <div class="modal-body">
+      <!-- ✅ Replace this image with YOUR QR -->
+      <div class="qr-box">
+        <img
+          src="./qr-aba.png"
+          alt="ABA KHQR Donate"
+          class="qr-img"
+        />
+      </div>
+
+      <div class="donate-info">
+        <div class="donate-row">
+          <span class="k">Name</span>
+          <span class="v">Your Name / Brand</span>
+        </div>
+        <div class="donate-row">
+          <span class="k">ABA ID</span>
+          <span class="v">xxxxxx</span>
+        </div>
+        <div class="donate-row">
+          <span class="k">Message</span>
+          <span class="v">អរគុណច្រើនសម្រាប់ការគាំទ្រ ❤️</span>
+        </div>
+      </div>
+
+      <div class="modal-actions">
+        <button class="btn" id="btnCopyPay" type="button">Copy ABA ID</button>
+        <button class="btn primary" type="button" data-close="true">Done</button>
+      </div>
+
+      <div class="small" style="margin-top:10px">
+        Tip: ប្រសិនបើ QR មើលមិនច្បាស់ សូមបើក brightness ឲ្យខ្ពស់ ឬ zoom in។
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
+
 
