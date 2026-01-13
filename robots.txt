@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lundy009.github.io/lundystudio/sitemap.xml
+Sitemap: http://hellobongdy.fun//sitemap.xml
+
 
