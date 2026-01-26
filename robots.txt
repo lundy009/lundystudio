@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: http://hellobongdy.fun//sitemap.xml
+Sitemap: https://hellobongdy.fun//sitemap.xml
+
 
 
