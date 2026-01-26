@@ -1,7 +1,7 @@
 {
   "name": "Blog Studio",
   "short_name": "Blog",
-  "start_url": "https://hellobongdy.fun/",
+  "start_url": "./index",
   "display": "standalone",
   "background_color": "#0b1220",
   "theme_color": "#0b1220",
@@ -10,5 +10,6 @@
     { "src": "./icon-512.png", "sizes": "512x512", "type": "image/png" }
   ]
 }
+
 
 
