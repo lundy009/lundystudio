@@ -3,7 +3,7 @@ const ASSETS = [
   "./",
   "./index.html",
   "./category.html",
-  "./post.html",
+  "./posts.html",
   "./styles.css",
   "./app.js",
   "./posts.json",
@@ -32,3 +32,4 @@ self.addEventListener("fetch", (e) => {
     }).catch(() => cached))
   );
 });
+
